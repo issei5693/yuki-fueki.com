@@ -1,0 +1,816 @@
+/*
+Theme Name: yuki_fueki
+Author: issei
+*/
+
+@chaeset "utf-8";
+
+/*===========================リセット===========================*/
+@import url("css/reset.css");
+/*追加リセット*/
+ul {
+	list-style-type: none;
+}
+
+/*===========================フォント===========================*/
+body {
+	font-family: "メイリオ",Meiryo,"ＭＳ Ｐゴシック",sans-serif;
+	color: #444;
+	font-size: 100%;
+	overflow: hidden;
+}
+
+/*===========================クリアフィクス===========================*/
+.cf::after,
+.site-width::after,
+.fl::after {
+	content: ".";
+	display: block;
+	height: 0;
+	font-size:0;
+	clear: both;
+	visibility:hidden;
+}
+
+/*===========================サイトの幅===========================*/
+.site-width {
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+/*===========================画像幅===========================*/
+figure img {
+	width: 100%;
+}
+/*===========================共通設定===========================*/
+.tc {
+	display: table;
+	width: 100%;
+}
+
+.tc > * {
+	display: table-cell;
+}
+
+.fl {
+	width: 100%;
+}
+
+.fl > *{
+	float: left;
+}
+
+.in > *{
+	display: inline;
+}
+
+.text {
+	line-height: 1.8;
+	letter-spacing: 2px;
+	padding: 5px;
+	margin-bottom: 20px;
+}
+
+/*===========================見出し===========================*/
+.h_style {
+	font-weight: bold;
+	margin-bottom: 20px;
+	line-height: 1.8;
+	font-size: 110%;
+}
+
+
+/*===========================body===========================*/
+body {
+	xborder: solid 10px #444;
+}
+
+/*===========================動画背景===========================
+.bg_video {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	width: auto;
+	height: auto;
+	min-height: 100%;
+	min-width: 100%;
+	z-index: -999;
+	background-color: rgba(68,68,68, 0.4);
+	background-size: cover;
+}
+*/
+
+/*===========================ヘッダー===========================*/
+/*
+グローバルメニュー(0～600のとき) */
+.header .site-width {
+	padding: 20px 10px;
+}
+
+.header .tc {
+	position: relative;
+}
+
+.header .tc .tc-1,
+.header .tc .tc-2 {
+	display: block;
+	width: 100%;
+}
+
+.header .logo {
+	max-width: 150px;
+}
+
+.header .logo img {
+	width: 100%;
+}
+
+.header .tc .tc-2 {
+	position: absolute;
+	top: 0;
+}
+
+.header .tc .tc-2 .sp-menu-btn {
+	display: block;
+	position: absolute;
+	top:0px;
+	right: 0;
+	width: 40px;
+	height: 40px;
+	border: solid 1px #aaa;
+	padding: 3px;
+	border-radius: 3px;
+	transition: 0.5s;
+}
+
+.header .tc .tc-2 .sp-menu-btn-open {
+	transform: rotate(90deg);
+}
+
+.header .tc .tc-2 .sp-menu-btn img {
+	width: 100%;
+}
+
+.header .tc .tc-2 .sp-menu {
+	position: absolute;
+	display: block;
+	top: 40px;
+	background-color: rgba(255,255,255,0.8);
+	z-index: 10;
+}
+
+.header .tc .tc-2 .sp-menu li {
+	display: block;
+}
+
+.header .tc .tc-2 .sp-menu li a {
+	display: block;
+	padding: 10px;
+	border-bottom: dotted 1px #aaa;
+	color: #444;
+	text-align: center;
+	font-weight: bold;
+	opacity: 0.5;
+}
+
+.header .tc .tc-2 .sp-menu li a:hover,
+.header .tc .tc-2 .sp-menu li a.active {
+	opacity: 1;
+}
+
+
+@media screen and (min-width: 600px) { /*グローバルメニュー600px以上 */
+	.header .tc .tc-2 .sp-menu-btn {
+		display: none;
+	}
+
+	.header {
+		font-size: 90%;
+	}
+
+	.header .site-width {
+		padding: 50px 0 50px 0;
+	}
+
+	.header .tc .tc-1 {
+		display: table-cell;
+		width: 50%;
+	}
+
+	.header .tc .tc-2 {
+		position: relative;
+		display: table-cell;
+		width: 50%;
+		text-align: center;
+	}
+
+	.header .logo {
+		display: block;
+		max-width: 250px;
+	}
+
+	.header .logo img {
+		width: 100%;
+	}
+
+	.header .tc .tc-2 .pc-menu {
+		display: table !important;
+		width: 100%;
+		background-color: transparent;
+	}
+
+	.header .tc .tc-2 .pc-menu li {
+		display: table-cell;
+		padding: 5px;
+	}
+
+	.header .tc .tc-2 .pc-menu li a {
+		padding: 0;
+		border-bottom: 0;
+	}
+
+	.header .tc .tc-2 .pc-menu li a:hover,
+	.header .tc .tc-2 .pc-menu li a.active {
+		border-bottom: solid 2px #444;
+	}
+
+}/* 600px～*/
+
+/*===========================インデックス===========================*/
+.index {
+	padding: 0 0 50px 0;
+}
+
+.index .fl > *{
+	width: 20%;
+}
+
+.index .fl > li {
+	xborder: solid 1px #444;
+}
+
+.index .fl > li {
+	padding: 1px;
+}
+
+.index .fl > li a {
+	display: block;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.index .fl > li a img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+}
+
+.index #more-btn {
+	display: block;
+	margin: 100px auto;
+	color: #444;
+	border: solid 1px #444;
+	max-width: 200px;
+	padding: 10px 20px;
+	text-align: center;
+	padding: 10px 50px;
+}
+
+.index #more-btn:hover {
+	cursor: pointer;
+	opacity: 0.5;
+}
+
+/*===========================プロフィール===========================*/
+.profile {
+	min-height: 360px;
+}
+
+.profile .tc .tc-1 {
+	width: 50%;
+}
+
+.profile .tc .tc-1 figure {
+	max-width: 400px;
+	position: relative;
+}
+
+.profile .tc .tc-1 figure:after {
+	position: absolute;
+	content: "";
+	box-shadow: 0 15px 10px rgba(0,0,0, .5); /* シャドウ */
+	transform: rotate(3deg); /* 回転させる */
+	right: 5px;
+	left: auto;
+	top: auto;
+	bottom: 15px;
+	z-index: -1;
+	width: 50%;
+	height: 20%;
+}
+
+.profile .tc .tc-1 figure img {
+	width: 100%;
+	border-radius: 3px;
+}
+
+.profile .tc .tc-2 {
+	width: 50%;
+	vertical-align: top;
+}
+
+.profile .tc .tc-2 ul {
+	padding: 5px;
+}
+
+.profile .tc .tc-2 ul li {
+	margin-bottom: 20px;
+}
+
+/*===========================ブログ===========================*/
+.blog .tc .tc-1 {
+	width: 70%;
+}
+
+.blog .tc .tc-1 section {
+	margin-bottom: 50px;
+}
+
+.blog .tc .tc-1 section a {
+	color: #444;
+}
+
+.blog .tc .tc-1 section a:hover {
+	text-decoration: underline;
+}
+
+.blog .tc .tc-1 .status {
+	font-size: 80%;
+	padding: 0 10px ;
+	margin-bottom: 10px;
+}
+
+.blog .tc .tc-1 .status > span {
+	margin-right: 10px;
+}
+
+.blog .tc .tc-1 .status > span.tag {
+	border: solid 1px #ccc;
+	padding: 2px 10px;
+	border-radius: 2px;
+}
+
+.blog .tc .tc-1 section .fl {
+	xpadding: 10px 0;
+}
+
+.blog .tc .tc-1 section .fl .fl-1 {
+	width: 30%;
+}
+
+.blog .tc .tc-1 section .fl .fl-1 a {
+	display: block;
+	margin: 0 auto;
+	width: 90%;
+}
+
+.blog .tc .tc-1 section .fl .fl-1 a:hover {
+	opacity: 0.5;
+}
+
+.blog .tc .tc-1 section .fl .fl-1 a img {
+	width: 100%;
+	height: auto;
+}
+
+.blog .tc .tc-1 section .fl .fl-2 {
+	width: 70%;
+}
+
+.blog .tc .tc-1 section .fl .fl-2 .text {
+	font-size: 90%;
+}
+
+.blog .tc .tc-1 section .fl .fl-2 .more-link {
+	padding: 10px;
+}
+
+.blog .tc .tc-1 section .fl .fl-2 .more-link a {
+	display: block;
+	margin: 20px auto;
+	color: #444;
+	background-color: #ccc;
+	max-width: 200px;
+	padding: 10px 20px;
+	text-align: center;
+}
+
+.blog .tc .tc-1 section .fl .fl-2 .more-link a:hover {
+	opacity: 0.5;
+}
+
+.blog .tc .tc-2 {
+	padding-left: 30px;
+	width: 30%;
+}
+
+.blog .tc .tc-2 ul li a {
+	display: block;
+	border-bottom: dotted 1px #ccc;
+	color: #444;
+	padding: 10px;
+}
+
+.blog .tc .tc-2 ul li a:hover {
+	opacity: 0.5;
+}
+
+.blog .pagenation ul {
+	width: 80%;
+	margin: 0 auto;
+	display: table;
+	margin-bottom: 30px;
+}
+
+.blog .pagenation ul li {
+	display: table-cell;
+	padding: 0 30px;
+}
+
+.blog .pagenation ul li span {
+	display: block;
+	padding: 5px;
+	font-size: 120%;
+	border: solid 1px #111;
+	border-radius: 3px;
+	text-align: center;
+	color: #444;
+}
+
+.blog .pagenation ul li.active span {
+	background-color: #ccc;
+}
+
+.blog .pagenation ul li span a {
+	display: block;
+}
+
+.blog .pagenation ul li span:hover {
+	opacity: 0.5;
+}
+
+/*===========================ブログ：カテゴリー===========================*/
+.category .cat_here {
+	margin-bottom: 30px;
+}
+
+/*===========================ブログ：シングル===========================*/
+.single article {
+	margin-bottom: 50px;
+}
+
+.single .blog-content .thmbnail {
+	display: block;
+	max-width: 600px;
+	margin: 0 auto 30px;
+}
+
+.single .blog-content .thmbnail img {
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.single .blog-content p {
+	line-height: 1.8;
+	letter-spacing: 2px;
+	padding: 5px;
+	margin-bottom: 20px;
+}
+
+.single .prev-next {
+	border-top: solid 1px #ccc;
+	border-bottom: solid 1px #ccc;
+	margin-bottom: 30px;
+}
+
+.single .prev-next  .tc-1,
+.single .prev-next  .tc-2 {
+	width: 50%;
+	padding: 5px;
+	text-align: center;
+}
+
+.single .prev-next a {
+	display: block;
+	padding: 10px 5px;
+}
+
+.single .prev-next  .tc-1 a {
+	border-right: solid 1px #ccc;
+}
+
+.single .prev-next a:hover {
+	opacity: 0.5;
+}
+
+/*--- コメント部分のデザイン ---*/
+.single .commments h3>span {
+	margin: 0 5px;
+	font-weight: normal;
+	font-size: 90%;
+}
+
+.single .comments-list {
+	border: solid 1px #ccc;
+	border-radius: 3px;
+	padding: 10px;
+	background-color: #fff;
+	margin-bottom: 50px;
+}
+
+.single .comments-list .depth-1 {
+	margin-bottom: 20px;
+	border-bottom: solid 1px #ccc;
+}
+
+.single .comments-list .depth-1 > .comment-body {
+	padding: 10px;
+}
+
+.single .comments-list .depth-1 > .children {
+	margin-left: 30px;
+	margin-bottom: 20px;
+	border-left: solid 1px #ccc;
+	padding: 20px;
+}
+
+.single .comments-list .comment-meta {
+	text-align: right;
+	margin-bottom: 5px;
+}
+
+.single .comments-list .comment_link_style {
+	font-size: 90%;
+	color: #999 !important;
+}
+
+.single .comments-list p {
+	padding: 10px 20px;
+	font-size: 90%;
+}
+
+.single .comments-list .reply {
+	text-align: right;
+}
+
+.single .comments-list .comment-reply-link  {
+	display: inline-block;
+	border:solid 1px #ccc;
+	padding: 3px 20px;
+}
+
+.single .comments-list .comment-reply-link:hover {
+	opacity: 0.5;
+	text-decoration: none !important;
+}
+
+.single .comment-form {
+		border:solid 1px #ccc;
+		padding: 10px;
+		border-radius: 3px;
+		background-color: #fff;
+}
+
+.single .comment-form > p.comment-notes {
+	color: #999;
+	margin-bottom: 30px;
+}
+
+.single .comment-form > p > label {
+	display: block;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+.single .comment-form > p > label + * {
+	border:solid 1px #ccc;
+	border-radius: 3px;
+	margin-bottom: 20px;
+	width: 100%;
+	padding: 10px;
+}
+
+.single .comment-form > p.form-submit {
+	text-align: center;
+}
+
+.single .comment-form > p .submit {
+	display: inline-block;
+	border: solid 1px #ccc;
+	border-radius: 3px;
+	padding: 10px 20px;
+	margin: 30px 0 ;
+}
+
+.single .comment-form > p .submit:hover {
+	opacity: 0.5;
+	cursor: pointer;
+}
+
+/*===========================コンタクト===========================*/
+.contact {
+	padding: 5px;
+}
+
+.contact-form {
+	margin: 50px auto 100px;
+	max-width: 800px;
+	border: solid 1px #ccc;
+	padding:  20px 10px;
+	background-color: rgba(255,255,255,0.8);
+	border-radius: 3px;
+}
+
+.contact-form form table {
+	width: 100%;
+	margin-bottom: 50px;
+}
+
+.contact-form form table td {
+	padding: 10px 0;
+}
+
+.contact-form form table td input[type="text"],
+.contact-form form table td input[type="email"],
+.contact-form form table td textarea {
+	width: 100%;
+	border:solid 5px #ccc;
+	border-radius: 3px;
+	padding: 10px;
+	background-color: rgba(255,255,255,1);
+}
+
+.contact-form form table td textarea {
+	min-height: 300px
+}
+
+.contact-form form table td input[type="text"]:focus,
+.contact-form form table td input[type="email"]:focus,
+.contact-form form table td textarea:focus {
+	box-shadow: 10px 10px 10px 3px rgba(0,0,0,0.4);
+}
+
+.contact-form form .submit-btn {
+	display: block;
+	margin: 0 auto 50px;
+	border: solid 1px #666;
+	padding: 10px 80px;
+}
+
+.contact-form form .submit-btn:hover {
+	cursor: pointer;
+	opacity: 0.5;
+}
+
+/*===========================フッター===========================*/
+.footer {
+	padding: 30px 0;
+}
+
+.footer a {
+	color: #fff;
+}
+
+.footer .tc {
+	padding: 50px 10%;
+}
+
+.footer .tc > li {
+	width: 33.3%;
+	text-align: center;
+}
+
+.footer .tc > li a {
+	display: inline-block;
+	max-width: 50px;
+}
+
+.footer .tc > li a:hover {
+	opacity: 0.5;
+}
+
+.footer .tc > li a img {
+	width: 100%;
+}
+
+.footer .copyright {
+	font-size: 70%;
+	color: #fff;
+	text-align: center;
+}
+
+.footer .copyright span {
+	display: block;
+}
+
+.footer .copyright span.note {
+	margin-bottom: 5px;
+}
+
+/*===========================レスポンシブ===========================*/
+@media screen and (max-width: 600px) { /*第1ブレークポイント横幅が600px以下 */
+	.index .fl > * {
+		width: 33.3%;
+	}
+
+/*===========================レスポンシブ：プロフィール===========================*/
+	.profile .site-width > .tc {
+		display: block;
+		padding: 5px;
+	}
+
+	.profile .site-width > .tc > * {
+		display: block;
+		width: 100%;
+	}
+
+/*===========================レスポンシブ：ブログ===========================*/
+	.blog .site-width > .tc {
+		display: block;
+		padding: 5px;
+	}
+
+	.blog .site-width > .tc > * {
+		display: block;
+		width: 100%;
+	}
+
+	.blog .tc .tc-1 section .fl > * {
+		float: none;
+	}
+
+	.blog .tc .tc-1 section .fl .fl-1,
+	.blog .tc .tc-1 section .fl .fl-2 {
+		width: 100%;
+	}
+
+	.blog .tc .tc-2 {
+		padding: 0;
+	}
+
+}/* 0～600px まで*/
+
+	@media screen and (max-width: 360px) { /*第2ブレークポイント横幅が361px以下 */
+		.index .fl > * {
+			width: 50%;
+		}
+
+}/* 0～360x まで*/
+
+/* 2017/12/15修正分 */
+#wrapper {
+	background-color: #000;
+}
+
+.header,
+main,
+.footer .copyright {
+	padding: 0 11% !important;
+}
+
+.perforation {
+	position: relative;
+	max-width: 1200px;
+	margin: 0 auto;
+	/* background: linear-gradient( 130deg, #008b8b 5%, #778899 25%, #f4a460 45%, #fffacd 80%, #4682b4 95% ); */
+	background-color: #fffafa;
+	border-left: solid 1px transparent;
+	border-right: solid 1px transparent;
+}
+
+.perforation::before {
+	content: '';
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	width: 9%;
+	height: 100%;
+	background-image: url('img/p.png');
+	background-size: contain;
+}
+
+.perforation::after {
+	content: '';
+	position: absolute;
+	display: block;
+	top: 0;
+	right: 0;
+	width: 9%;
+	height: 100%;
+	background-image: url('img/p.png');
+	background-size: contain;
+}
